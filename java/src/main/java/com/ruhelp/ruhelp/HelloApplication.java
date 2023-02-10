@@ -1,4 +1,4 @@
-package com.teste.teste;
+package com.ruhelp.ruhelp;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

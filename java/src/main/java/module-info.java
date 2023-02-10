@@ -7,6 +7,6 @@ module com.teste.teste {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
 
-    opens com.teste.teste to javafx.fxml;
-    exports com.teste.teste;
+    opens com.ruhelp.ruhelp to javafx.fxml;
+    exports com.ruhelp.ruhelp;
 }

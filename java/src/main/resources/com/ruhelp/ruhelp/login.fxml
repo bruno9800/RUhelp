@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.HelloController">
+   <children>
+      <HBox>
+         <children>
+            <GridPane prefHeight="720.0" prefWidth="695.0" style="-fx-background-color: #FFF;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="356.0" minHeight="10.0" prefHeight="356.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="623.0" minHeight="10.0" prefHeight="210.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="425.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="175.0" minHeight="0.0" prefHeight="66.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label id="esqueceu_seu_cartao" stylesheets="@login.css" text="Esqueceu seu Cartão?" textAlignment="CENTER" textFill="#2f4578" wrapText="true" GridPane.halignment="CENTER" />
+                  <ImageView fitHeight="194.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@imgs/cartao.png" />
+                     </image>
+                  </ImageView>
+                  <Label id="da_um_ruhelp" stylesheets="@login.css" text="Da um RUHelp!!!" textFill="#2f4578" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <ImageView fitHeight="32.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                     <image>
+                        <Image url="@imgs/univasf.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <VBox alignment="CENTER" fillWidth="false" style="-fx-background-color: #FFAF1D;" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox alignment="TOP_CENTER" fillWidth="false" minHeight="0.0" minWidth="0.0" prefHeight="443.0" prefWidth="394.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0);">
+                     <children>
+                        <Pane prefWidth="394.0">
+                           <children>
+                              <Label id="ruhelp" layoutX="112.0" layoutY="50.0" stylesheets="@login.css" text="RUHelp" textFill="#2f4578">
+                                 <font>
+                                    <Font name="Fredoka One" size="48.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="cpf_input" layoutX="58.0" layoutY="164.0" prefHeight="48.0" prefWidth="278.0" promptText="Insira o CPF" stylesheets="@login.css">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField id="password_input" layoutX="58.0" layoutY="225.0" prefHeight="48.0" prefWidth="280.0" promptText="Insira a senha" stylesheets="@login.css">
+                                 <font>
+                                    <Font name="Arial" size="20.0" />
+                                 </font>
+                              </PasswordField>
+                              <Button id="login-btn" graphicTextGap="0.0" layoutX="58.0" layoutY="317.0" maxHeight="100000.0" maxWidth="100000.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" prefHeight="48.0" prefWidth="280.0" snapToPixel="false" style="-fx-background-color: #00D957; -fx-font-weight: 700;" stylesheets="@login.css" text="Entrar" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Button>
+                              <Button id="register-btn" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="58.0" layoutY="373.0" maxHeight="100000.0" maxWidth="100000.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" prefHeight="48.0" prefWidth="280.0" style="-fx-background-color: #00D957; -fx-font-weight: 700;" stylesheets="@login.css" text="Cadastrar" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

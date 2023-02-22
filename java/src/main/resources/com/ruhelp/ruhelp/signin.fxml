@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" spacing="20.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="713.0" prefWidth="1266.0" style="-fx-background-color: #FFF;">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="680.0" prefWidth="167.0">
+               <children>
+                  <Button id="voltar" mnemonicParsing="false" stylesheets="@signin.css" text="Voltar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+               <padding>
+                  <Insets bottom="60.0" />
+               </padding>
+            </VBox>
+            <VBox id="form_container" alignment="CENTER_RIGHT" pickOnBounds="false" prefHeight="560.0" prefWidth="1033.0" stylesheets="@signin.css">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="441.0" prefWidth="993.0">
+                     <children>
+                        <VBox fillWidth="false" prefHeight="459.0" prefWidth="731.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="582.0">
+                                 <children>
+                                    <Label blendMode="SRC_ATOP" stylesheets="@signin.css" text="Qual o seu nome?">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField blendMode="SRC_ATOP" stylesheets="@signin.css">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="581.0">
+                                 <children>
+                                    <Label blendMode="SRC_ATOP" stylesheets="@signin.css" text="Qual o seu CPF?" />
+                                    <TextField blendMode="SRC_ATOP" stylesheets="@signin.css">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="581.0">
+                                 <children>
+                                    <Label blendMode="SRC_ATOP" stylesheets="@signin.css" text="Qual o seu número de matrícula?" />
+                                    <TextField blendMode="SRC_ATOP" stylesheets="@signin.css">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="581.0">
+                                 <children>
+                                    <Label blendMode="SRC_ATOP" stylesheets="@signin.css" text="Senha" />
+                                    <PasswordField>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </PasswordField>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_LEFT" fillWidth="false" prefHeight="85.0" prefWidth="285.0">
+                                 <children>
+                                    <Label blendMode="SRC_ATOP" stylesheets="@signin.css" text="Qual a sua categoria?" />
+                                    <HBox alignment="BASELINE_CENTER" prefHeight="38.0" prefWidth="132.0">
+                                       <children>
+                                          <Pane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <RadioButton blendMode="SRC_ATOP" mnemonicParsing="false" stylesheets="@signin.css" text="P1">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </RadioButton>
+                                             </children>
+                                          </Pane>
+                                          <Pane prefHeight="200.0" prefWidth="200.0">
+                                             <children>
+                                                <RadioButton blendMode="SRC_ATOP" mnemonicParsing="false" stylesheets="@signin.css" text="P2">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </RadioButton>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </VBox>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="24.4">
+                           <image>
+                              <Image url="@imgs/cartao.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Button id="cadastrar" blendMode="SRC_ATOP" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="0.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="51.0" prefWidth="280.0" scaleShape="false" stylesheets="@signin.css" text="Cadastrar" VBox.vgrow="NEVER">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

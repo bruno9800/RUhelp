@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../../../fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+.text {
+    -fx-font-family: "Inter";
+    -fx-font-size: 24;
+}

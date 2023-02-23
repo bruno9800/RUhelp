@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('../../../fonts/Inter-Bold.ttf');
+}
+
+.text {
+    -fx-font-family: 'Inter Bold';
+    -fx-font-size: 20;
+}

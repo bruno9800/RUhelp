@@ -2,4 +2,6 @@
     -fx-background-color: transparent;
     -fx-border-width: 0 0 2 0;
     -fx-border-color: #fff;
+    -fx-text-fill: #614512;
+    -fx-alignment: left;
 }

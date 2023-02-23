@@ -11,7 +11,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <Button graphicTextGap="0.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" stylesheets="@menu.css" text="Tela Inicial">
+      <Button cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" scaleShape="false" stylesheets="@menu.css" text="Tela Inicial">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.HelloController">
+<VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.LoginController">
    <children>
       <HBox>
          <children>
@@ -58,17 +58,17 @@
                                     <Font name="Fredoka One" size="48.0" />
                                  </font>
                               </Label>
-                              <TextField id="cpf_input" layoutX="58.0" layoutY="164.0" prefHeight="48.0" prefWidth="278.0" promptText="Insira o CPF" stylesheets="@login.css">
+                              <TextField id="cpf_input" fx:id="cpfLogin" layoutX="58.0" layoutY="164.0" prefHeight="48.0" prefWidth="278.0" promptText="Insira o CPF" stylesheets="@login.css">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
                               </TextField>
-                              <PasswordField id="password_input" layoutX="58.0" layoutY="225.0" prefHeight="48.0" prefWidth="280.0" promptText="Insira a senha" stylesheets="@login.css">
+                              <PasswordField id="password_input" fx:id="senhaLogin" layoutX="58.0" layoutY="225.0" prefHeight="48.0" prefWidth="280.0" promptText="Insira a senha" stylesheets="@login.css">
                                  <font>
                                     <Font name="Arial" size="20.0" />
                                  </font>
                               </PasswordField>
-                              <Button id="login-btn" graphicTextGap="0.0" layoutX="58.0" layoutY="317.0" maxHeight="100000.0" maxWidth="100000.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" prefHeight="48.0" prefWidth="280.0" snapToPixel="false" style="-fx-background-color: #00D957; -fx-font-weight: 700;" stylesheets="@login.css" text="Entrar" textAlignment="CENTER" textFill="WHITE">
+                              <Button id="login-btn" graphicTextGap="0.0" layoutX="58.0" layoutY="317.0" maxHeight="100000.0" maxWidth="100000.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onAction="#loginButton" pickOnBounds="false" prefHeight="48.0" prefWidth="280.0" snapToPixel="false" style="-fx-background-color: #00D957; -fx-font-weight: 700;" stylesheets="@login.css" text="Entrar" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font size="28.0" />
                                  </font>
@@ -78,6 +78,7 @@
                                     <Font size="28.0" />
                                  </font>
                               </Button>
+                              <Label fx:id="test" alignment="CENTER" layoutX="59.0" layoutY="287.0" prefHeight="17.0" prefWidth="266.0" textAlignment="CENTER" textFill="RED" />
                            </children>
                         </Pane>
                      </children>

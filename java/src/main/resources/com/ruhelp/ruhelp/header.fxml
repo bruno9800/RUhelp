@@ -9,12 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox alignment="CENTER" prefHeight="122.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.HelloController">
+<VBox alignment="CENTER" prefHeight="122.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.MenuController">
    <children>
       <BorderPane prefHeight="100.0">
          <right>
-            <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: transparent; -fx-border-color: #000; -fx-border-radius: 10;" text="Sair" BorderPane.alignment="CENTER">
+            <Button mnemonicParsing="false" onMouseClicked="#sair" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: transparent; -fx-border-color: #000; -fx-border-radius: 10;" text="Sair" BorderPane.alignment="CENTER">
                <padding>
                   <Insets left="20.0" right="20.0" />
                </padding>

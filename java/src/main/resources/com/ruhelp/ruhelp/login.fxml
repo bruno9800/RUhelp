@@ -73,7 +73,7 @@
                                     <Font size="28.0" />
                                  </font>
                               </Button>
-                              <Button id="register-btn" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="58.0" layoutY="373.0" maxHeight="100000.0" maxWidth="100000.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" mouseTransparent="true" pickOnBounds="false" prefHeight="48.0" prefWidth="280.0" style="-fx-background-color: #00D957; -fx-font-weight: 700;" stylesheets="@login.css" text="Cadastrar" textAlignment="CENTER" textFill="WHITE">
+                              <Button id="register-btn" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="58.0" layoutY="373.0" maxHeight="100000.0" maxWidth="100000.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" onMouseClicked="#cadastrarlogin" prefHeight="48.0" prefWidth="280.0" style="-fx-background-color: #00D957; -fx-font-weight: 700;" stylesheets="@login.css" text="Cadastrar" textAlignment="CENTER" textFill="WHITE">
                                  <font>
                                     <Font size="28.0" />
                                  </font>

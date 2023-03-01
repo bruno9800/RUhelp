@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox prefHeight="586.0" prefWidth="948.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<HBox prefHeight="586.0" prefWidth="948.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.MenuController">
    <children>
       <VBox prefHeight="546.0" prefWidth="946.0">
          <children>
@@ -135,7 +135,7 @@
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefWidth="364.0">
                            <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #00D957; -fx-text-fill: white;" text="Solicitar Alteração">
+                              <Button mnemonicParsing="false" onMouseClicked="#alteracao" style="-fx-background-color: #00D957; -fx-text-fill: white;" text="Solicitar Alteração">
                                  <VBox.margin>
                                     <Insets />
                                  </VBox.margin>

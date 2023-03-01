@@ -45,7 +45,7 @@ public class MenuController {
     private void configurations(MouseEvent event) {
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("configurations.fxml"));
+            root = FXMLLoader.load(getClass().getResource("configuration.fxml"));
             Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
@@ -54,5 +54,108 @@ public class MenuController {
             e.printStackTrace();
         }
     }
+    
+    @FXML
+    private void sair(MouseEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("login.fxml"));
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void emprestar(MouseEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("buy.fxml"));
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void pedir(MouseEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("provide.fxml"));
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    //FALTA ADICIONAR INTERAÇÕES COM O BANCO DE DADOS, SÓ TA FAZENDO A TROCA DE TELA
+    private void disponibilizar(MouseEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("home.fxml"));
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    //FALTA ADICIONAR INTERAÇÕES COM O BANCO DE DADOS, SÓ TA FAZENDO A TROCA DE TELA
+    private void enviar(MouseEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("home.fxml"));
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    //FALTA ADICIONAR INTERAÇÕES COM O BANCO DE DADOS, SÓ TA FAZENDO A TROCA DE TELA
+    private void cadastrar(MouseEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("login.fxml"));
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    //FALTA ADICIONAR INTERAÇÕES COM O BANCO DE DADOS, SÓ TA FAZENDO A TROCA DE TELA
+    private void alteracao(MouseEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("home.fxml"));
+            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }

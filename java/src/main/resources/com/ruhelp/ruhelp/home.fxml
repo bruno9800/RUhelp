@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.HelloController">
+<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.MenuController">
    <children>
       <BorderPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;">
          <left>
@@ -84,7 +84,7 @@
                      <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="242.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="223.0" style="-fx-background-color: #00D957;" text="Emprestar Cartão" textFill="WHITE">
+                              <Button mnemonicParsing="false" onMouseClicked="#emprestar" prefHeight="44.0" prefWidth="223.0" style="-fx-background-color: #00D957;" text="Emprestar Cartão" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font>
@@ -99,7 +99,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="66.0" prefWidth="212.0">
                            <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #00D957;" text="Pedir Cartão" textFill="WHITE">
+                              <Button mnemonicParsing="false" onMouseClicked="#pedir" style="-fx-background-color: #00D957;" text="Pedir Cartão" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font>

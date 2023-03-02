@@ -6,10 +6,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 
-<BorderPane maxHeight="106.0" maxWidth="1.7976931348623157E308" minHeight="106.0" prefHeight="106.0" style="-fx-background-color: white;" stylesheets="@historic_box.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="138.0" maxWidth="1.7976931348623157E308" minHeight="106.0" prefHeight="135.0" prefWidth="846.0" style="-fx-background-color: white;" stylesheets="@historic_box.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <left>
-      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="646.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="646.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="82.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
@@ -21,10 +22,13 @@
             </ImageView>
             <Label fx:id="name" prefHeight="30.0" prefWidth="509.0" text="Tony Stark" />
          </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
       </HBox>
    </left>
    <right>
-      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
             <Label text="P1">
                <HBox.margin>
@@ -38,4 +42,10 @@
          </children>
       </HBox>
    </right>
+   <bottom>
+      <Pane prefHeight="20.0" prefWidth="200.0" visible="false" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <Pane style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>

@@ -13,11 +13,10 @@ import javafx.scene.Node;
 
 import java.io.Console;
 import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 import com.ruhelp.ruhelp.Conexao;
+import com.ruhelp.ruhelp.core.VerificarLogin;
 
 public class LoginController {
     @FXML
@@ -31,17 +30,16 @@ public class LoginController {
 
     @FXML
     protected void loginButton() throws SQLException {
-       Conexao c = new Conexao("localhost","5432", "postgres", "postgres", "test123");
-       c.conect();
-
-       ResultSet result = c.query("Select pk_cpf,nome from usuario where pk_cpf = "+"'"+cpfLogin.getText()+"' and senha = "+"'"+senhaLogin.getText()+"'");
-       
-        if(result.next()){
-        test.setText("Entrou");
-       }
-       else
-        test.setText("Usuario ou senha errada");
-       
+        
+        VerificarLogin login = new VerificarLogin();
+        ResultSet rs = login.Verificar(cpfLogin.getText(), senhaLogin.getText());
+        if(rs.next()){
+            test.setText("Entrou");
+            //MUDA A TELA PORRA
+        }else{
+            test.setText("Usuário ou senha inválidos");
+        }
+        
     }
 
     @FXML

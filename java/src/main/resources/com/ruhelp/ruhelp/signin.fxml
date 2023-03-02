@@ -45,7 +45,7 @@
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <TextField blendMode="SRC_ATOP" stylesheets="@signin.css">
+                                    <TextField fx:id="nomeCad" blendMode="SRC_ATOP" stylesheets="@signin.css">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -58,7 +58,7 @@
                               <VBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="581.0">
                                  <children>
                                     <Label blendMode="SRC_ATOP" stylesheets="@signin.css" text="Qual o seu CPF?" />
-                                    <TextField blendMode="SRC_ATOP" stylesheets="@signin.css">
+                                    <TextField fx:id="cpfCad" blendMode="SRC_ATOP" stylesheets="@signin.css">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
@@ -68,7 +68,7 @@
                               <VBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="581.0">
                                  <children>
                                     <Label blendMode="SRC_ATOP" stylesheets="@signin.css" text="Qual o seu número de matrícula?" />
-                                    <TextField blendMode="SRC_ATOP" stylesheets="@signin.css">
+                                    <TextField fx:id="matriculaCad" blendMode="SRC_ATOP" stylesheets="@signin.css">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
@@ -78,7 +78,7 @@
                               <VBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="581.0">
                                  <children>
                                     <Label blendMode="SRC_ATOP" stylesheets="@signin.css" text="Senha" />
-                                    <PasswordField>
+                                    <PasswordField fx:id="senhaCad">
                                        <font>
                                           <Font size="16.0" />
                                        </font>
@@ -132,6 +132,7 @@
                         <Font size="32.0" />
                      </font>
                   </Button>
+                  <Label fx:id="error" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="1005.0" textFill="RED" />
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

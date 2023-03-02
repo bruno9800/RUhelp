@@ -30,6 +30,7 @@
                      </padding>
                      <children>
                         <fx:include source="historic_box.fxml" />
+                        <fx:include source="historic_box.fxml" />
                      </children></VBox>
                </children>
                <padding>

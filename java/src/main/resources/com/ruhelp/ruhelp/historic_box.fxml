@@ -19,7 +19,7 @@
                   <Image url="@imgs/perfil1.png" />
                </image>
             </ImageView>
-            <Label prefHeight="30.0" prefWidth="509.0" text="Tony Stark" />
+            <Label fx:id="name" prefHeight="30.0" prefWidth="509.0" text="Tony Stark" />
          </children>
       </HBox>
    </left>

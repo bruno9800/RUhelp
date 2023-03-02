@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox prefHeight="586.0" prefWidth="948.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.MenuController">
+<HBox prefHeight="586.0" prefWidth="948.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.ConfigFormsController">
    <children>
       <VBox prefHeight="546.0" prefWidth="946.0">
          <children>

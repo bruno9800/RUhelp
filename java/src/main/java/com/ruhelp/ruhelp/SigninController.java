@@ -27,6 +27,8 @@ public class SigninController {
 
     @FXML private Label error;
 
+
+    @FXML
     private void cadastrar(MouseEvent event) throws SQLException {
         try {
             FazerCadastro cadastro = new FazerCadastro();
@@ -38,6 +40,15 @@ public class SigninController {
             }
         } catch (IOException e) {
             error.setText("Erro ao cadastrar usuário");
+        }
+    }
+
+    @FXML
+    private void voltar(MouseEvent event) {
+        try {
+            sceneUtils.SetScene(event, "login.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

@@ -11,6 +11,6 @@ public class HistoricController {
     @FXML private VBox list;
 
     @FXML private void test(){
-        list.getChildren().add()
+        list.getChildren().add();
     }
 }

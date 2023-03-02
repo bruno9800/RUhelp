@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.sql.*;
 
 import com.ruhelp.ruhelp.Conexao;
+import com.ruhelp.ruhelp.core.VerificarLogin;
 
 public class LoginController {
     @FXML
@@ -29,16 +30,16 @@ public class LoginController {
 
     @FXML
     protected void loginButton() throws SQLException {
-        Connection c = Conexao.getConexao();
-
-        /*
-        ResultSet result = c.query("Select pk_cpf,nome from usuario where pk_cpf = " + "'" + cpfLogin.getText() + "' and senha = " + "'" + senhaLogin.getText() + "'");
-
-        if (result.next()) {
+        
+        VerificarLogin login = new VerificarLogin();
+        ResultSet rs = login.Verificar(cpfLogin.getText(), senhaLogin.getText());
+        if(rs.next()){
             test.setText("Entrou");
-        } else
-            test.setText("Usuario ou senha errada");
-        */
+            //MUDA A TELA PORRA
+        }else{
+            test.setText("Usuário ou senha inválidos");
+        }
+        
     }
 
     @FXML

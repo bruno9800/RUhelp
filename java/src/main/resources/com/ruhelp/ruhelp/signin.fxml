@@ -92,7 +92,7 @@
                                        <children>
                                           <Pane prefHeight="200.0" prefWidth="200.0">
                                              <children>
-                                                <RadioButton blendMode="SRC_ATOP" mnemonicParsing="false" stylesheets="@signin.css" text="P1">
+                                                <RadioButton fx:id="p1cad" blendMode="SRC_ATOP" mnemonicParsing="false" stylesheets="@signin.css" text="P1">
                                                    <cursor>
                                                       <Cursor fx:constant="HAND" />
                                                    </cursor>
@@ -101,7 +101,7 @@
                                           </Pane>
                                           <Pane prefHeight="200.0" prefWidth="200.0">
                                              <children>
-                                                <RadioButton blendMode="SRC_ATOP" mnemonicParsing="false" stylesheets="@signin.css" text="P2">
+                                                <RadioButton fx:id="p2cad" blendMode="SRC_ATOP" mnemonicParsing="false" stylesheets="@signin.css" text="P2">
                                                    <cursor>
                                                       <Cursor fx:constant="HAND" />
                                                    </cursor>

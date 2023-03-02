@@ -10,15 +10,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
-
-import java.io.Console;
 import java.io.IOException;
 import java.sql.*;
 
-import com.ruhelp.ruhelp.Conexao;
-import com.ruhelp.ruhelp.core.VerificarLogin;
+import com.ruhelp.ruhelp.core.session.Session;
 
 public class LoginController {
+    SceneUtils sceneUtils = new SceneUtils();
+
     @FXML
     private TextField cpfLogin;
 
@@ -29,13 +28,12 @@ public class LoginController {
     private Label test;
 
     @FXML
-    protected void loginButton() throws SQLException {
-        
-        VerificarLogin login = new VerificarLogin();
-        ResultSet rs = login.Verificar(cpfLogin.getText(), senhaLogin.getText());
-        if(rs.next()){
+    private void loginButton(MouseEvent event) throws SQLException, IOException {
+        Session sessao = Session.getInstance();
+       sessao.isValidateLogin(cpfLogin.getText(), senhaLogin.getText());
+        if(sessao.isStatus()){
             test.setText("Entrou");
-            //MUDA A TELA PORRA
+            sceneUtils.SetScene(event, "home.fxml");
         }else{
             test.setText("Usuário ou senha inválidos");
         }

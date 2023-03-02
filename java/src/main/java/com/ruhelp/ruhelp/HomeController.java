@@ -1,10 +1,14 @@
 package com.ruhelp.ruhelp;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
+import com.ruhelp.ruhelp.core.session.Session;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -17,9 +21,14 @@ public class HomeController {
 
     @FXML VBox available_container;
     @FXML VBox request_container;
-
+    @FXML private Label username;
+    // metodo que retorna String a partir de um Cpf
     @FXML
     public void initialize() throws IOException {
+        Session sessao = Session.getInstance();
+        
+        username.setText("Olá, "+ sessao.getUser().getNome());
+
         populateAvailable();
         populateRequest();
     }
@@ -57,6 +66,7 @@ public class HomeController {
             request_container.getChildren().add(boxpane);
         }
     }
+    
 
     @FXML
     private void emprestar(MouseEvent event) {

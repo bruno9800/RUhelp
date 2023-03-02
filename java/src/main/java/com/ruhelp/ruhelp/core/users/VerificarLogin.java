@@ -1,4 +1,4 @@
-package com.ruhelp.ruhelp.core;
+package com.ruhelp.ruhelp.core.users;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,7 +17,6 @@ public class VerificarLogin {
 
         String query = "Select * from usuario where pk_cpf = ? and senha = ?";
         PreparedStatement stmt = c.prepareStatement(query);
-        ResultSet rs = null;
         stmt.setLong(1, cpf);
         stmt.setString(2, senha);
 

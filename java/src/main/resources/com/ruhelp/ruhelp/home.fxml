@@ -33,7 +33,7 @@
                      <children>
                         <VBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="520.0">
                            <children>
-                              <Label text="Olá, User">
+                              <Label fx:id="username">
                                  <font>
                                     <Font size="40.0" />
                                  </font>

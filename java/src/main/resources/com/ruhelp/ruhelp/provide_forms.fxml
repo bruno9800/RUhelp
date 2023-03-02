@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox prefHeight="586.0" prefWidth="948.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.MenuController">
+<HBox prefHeight="586.0" prefWidth="948.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.ProvideFormsController">
    <children>
       <VBox prefHeight="546.0" prefWidth="946.0">
          <children>
@@ -41,14 +41,14 @@
                                           </ImageView>
                                        </left>
                                        <center>
-                                          <Label text="Hugo Hand" BorderPane.alignment="CENTER_LEFT">
+                                          <Label fx:id="nameProvide" BorderPane.alignment="CENTER_LEFT">
                                              <font>
                                                 <Font size="24.0" />
                                              </font>
                                           </Label>
                                        </center>
                                        <right>
-                                          <Label text="P1" BorderPane.alignment="CENTER">
+                                          <Label fx:id="categoryProvide" BorderPane.alignment="CENTER">
                                              <font>
                                                 <Font size="24.0" />
                                              </font>
@@ -99,7 +99,7 @@
                         </VBox>
                         <VBox alignment="CENTER_LEFT" prefWidth="364.0">
                            <children>
-                              <Button mnemonicParsing="false" onMouseClicked="#disponibilizar" style="-fx-background-color: #00D957; -fx-text-fill: white;" text="Disponibilizar">
+                              <Button mnemonicParsing="false" style="-fx-background-color: #00D957; -fx-text-fill: white;" text="Disponibilizar">
                                  <VBox.margin>
                                     <Insets />
                                  </VBox.margin>

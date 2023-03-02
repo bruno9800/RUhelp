@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.HelloController">
+<VBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.HistoricController">
    <children>
       <BorderPane prefHeight="767.0" prefWidth="1240.0">
          <left>
@@ -24,12 +24,11 @@
                         <Insets bottom="20.0" top="20.0" />
                      </VBox.margin>
                   </Label>
-                  <VBox prefHeight="587.0" prefWidth="1077.0" style="-fx-background-color: #D9D9D9;">
+                  <VBox fx:id="list" prefHeight="587.0" prefWidth="1077.0" style="-fx-background-color: #D9D9D9;">
                      <padding>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                      </padding>
                      <children>
-                        <fx:include source="historic_box.fxml" />
                         <fx:include source="historic_box.fxml" />
                      </children></VBox>
                </children>

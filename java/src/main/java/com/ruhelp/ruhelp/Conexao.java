@@ -3,14 +3,38 @@ package com.ruhelp.ruhelp;
 import java.sql.*;
 
 public class Conexao {
-	private String local;
-	private String user;
-	private String senha;
-	private Connection c;
-	private Statement statment;
-	private String str_conexao;
-	private String driverjdbc;
+	//private String local = "postgresql";
+	//private String user = "postgres";
+	//private String senha = "test123";
+	private static Connection c = null;
 
+	private static volatile Conexao UNIQUE_INSTANCE;
+	//private String str_conexao = "jdbc:"+user+"://"+local+":5432/postgres";
+	//private String driverjdbc = "org.postgresql.Driver";
+
+
+
+	private Conexao() {}
+
+	static  {
+		try {
+			if(c == null){
+				Class.forName("org.postgresql.Driver");
+				c = (DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "test123"));
+
+				System.out.println("Conectou");
+			}
+		} catch( SQLException | ClassNotFoundException e) {
+			System.err.println(e);
+			e.printStackTrace();
+		}
+	}
+
+	public static Connection getConexao() {
+		return c;
+	}
+
+	/*
 	public Conexao( String local, String porta,
 	String banco, String user, String senha) {
   			setStr_conexao("jdbc:postgresql://"+ local +":" + porta +"/"+ banco);
@@ -18,7 +42,7 @@ public class Conexao {
   			setSenha(senha);
   			setUser(user);
   			setDriverjdbc("org.postgresql.Driver");
-  		 
+
   	}
 
 	public void configUser(String user, String senha) {
@@ -34,7 +58,7 @@ public class Conexao {
 	public void conect(){
 		try {
 			Class.forName(getDriverjdbc());
-			setC(DriverManager.getConnection(getStr_conexao(), getUser(), getSenha()));
+			setC(DriverManager.getConnection("localhost", getUser(), getSenha()));
 			setStatment(getC().createStatement());
 		}catch (Exception e) {
 			System.err.println(e);
@@ -69,7 +93,7 @@ public class Conexao {
 		this.local = local;
 	}
 
-	public String getUser() {
+	public static String getUser() {
 		return user;
 	}
 
@@ -77,7 +101,7 @@ public class Conexao {
 		this.user = user;
 	}
 
-	public String getSenha() {
+	public static String getSenha() {
 		return senha;
 	}
 
@@ -85,11 +109,11 @@ public class Conexao {
 		this.senha = senha;
 	}
 
-	public Connection getC() {
+	public static Connection getC() {
 		return c;
 	}
 
-	public void setC(Connection c) {
+	public static void setC(Connection c) {
 		this.c = c;
 	}
 
@@ -97,11 +121,11 @@ public class Conexao {
 		return statment;
 	}
 
-	public void setStatment(Statement statment) {
+	public static void setStatment(Statement statment) {
 		this.statment = statment;
 	}
 
-	public String getStr_conexao() {
+	public static String getStr_conexao() {
 		return str_conexao;
 	}
 
@@ -109,12 +133,14 @@ public class Conexao {
 		this.str_conexao = str_conexao;
 	}
 
-	public String getDriverjdbc() {
+	public static String getDriverjdbc() {
 		return driverjdbc;
 	}
 
 	public void setDriverjdbc(String driverjdbc) {
 		this.driverjdbc = driverjdbc;
 	}
+
+	 */
 
 }

@@ -23,7 +23,7 @@
          <children>
             <VBox alignment="BOTTOM_CENTER" prefHeight="680.0" prefWidth="167.0">
                <children>
-                  <Button id="voltar" mnemonicParsing="false" stylesheets="@signin.css" text="Voltar">
+                  <Button id="voltar" mnemonicParsing="false" onMouseClicked="#voltar" stylesheets="@signin.css" text="Voltar">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>

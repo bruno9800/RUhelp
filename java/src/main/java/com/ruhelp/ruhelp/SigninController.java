@@ -3,6 +3,8 @@ package com.ruhelp.ruhelp;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import com.ruhelp.ruhelp.core.users.FazerCadastro;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;

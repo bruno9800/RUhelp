@@ -18,12 +18,4 @@ public class SceneUtils {
         stage.setScene(new_scene);
         stage.show();
     }
-
-    public void BackToLogin(String scene) {
-        Parent root = FXMLLoader.load(getClass().getResource(scene));
-        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene new_scene = new Scene(root);
-        stage.setScene(new_scene);
-        stage.show();
-    }
 }

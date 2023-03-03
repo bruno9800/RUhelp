@@ -35,7 +35,7 @@ public class HomeController {
     public void initialize() throws IOException, SQLException {
         Session sessao = Session.getInstance();
         
-        username.setText("Olá, "+ sessao.getUser().getNome());
+        //username.setText("Olá, "+ sessao.getUser().getNome());
 
         populateAvailable();
         populateRequest();

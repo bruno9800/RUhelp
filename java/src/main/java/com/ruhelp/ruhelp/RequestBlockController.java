@@ -22,7 +22,6 @@ public class RequestBlockController {
 
         VBox vbox = (VBox) bp.getParent();
         vbox.getChildren().remove(bp);
-
     }
 
     @FXML

@@ -25,9 +25,9 @@ public class HomeController {
     // metodo que retorna String a partir de um Cpf
     @FXML
     public void initialize() throws IOException {
-        Session sessao = Session.getInstance();
+        //Session sessao = Session.getInstance();
         
-        username.setText("Olá, "+ sessao.getUser().getNome());
+        //username.setText("Olá, "+ sessao.getUser().getNome());
 
         populateAvailable();
         populateRequest();

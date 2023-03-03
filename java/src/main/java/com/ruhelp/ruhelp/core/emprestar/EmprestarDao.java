@@ -33,6 +33,9 @@ public class EmprestarDao {
             Emprestar e = new Emprestar(Integer.parseInt(rs.getString("pk_codDisp")) , rs.getString("nome"), rs.getString("categoria"), rs.getString("diaSemana"), rs.getString("horario"));
             this.disponiveis.add(e);
           }
+        for(Emprestar e: this.disponiveis) {
+            System.out.println("\n" + e.getName());
+        }
       }catch(SQLException e) {
     }
   }

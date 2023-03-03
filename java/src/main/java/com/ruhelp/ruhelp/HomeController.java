@@ -35,7 +35,7 @@ public class HomeController {
     public void initialize() throws IOException, SQLException {
         Session sessao = Session.getInstance();
         
-        //username.setText("Olá, "+ sessao.getUser().getNome());
+        username.setText("Olá, "+ sessao.getUser().getNome());
 
         populateAvailable();
         populateRequest();
@@ -47,8 +47,6 @@ public class HomeController {
         EmprestarDao emprestaDao = EmprestarDao.getInstance();
         //emprestaDao.AtualizarInstance();
         for( Emprestar e : emprestaDao.getDisponiveis()){
-
-           
             // Emprestar e = new Emprestar(Integer.parseInt(rs.getString("pk_codDisp")) , rs.getString("nome"), rs.getString("categoria"), rs.getString("diaSemana"), rs.getString("horario"));
             FXMLLoader box = new FXMLLoader(getClass().getResource("available_block.fxml"));
             BorderPane boxpane = box.load();
@@ -78,23 +76,24 @@ public class HomeController {
         ResultSet rs = stmt.executeQuery();
         query = "select nome from usuario where pk_cpf = ?";
         stmt = c.prepareStatement(query);
-        if(rs.next())
-        stmt.setLong(1, Long.parseLong(rs.getString("pkfk_cpf")));
-        ResultSet rs2 = stmt.executeQuery();
-        while(rs2.next()){
-            FXMLLoader box = new FXMLLoader(getClass().getResource("request_block.fxml"));
-            BorderPane boxpane = box.load();
+        if(rs.next()) {
+            stmt.setLong(1, Long.parseLong(rs.getString("pkfk_cpf")));
+            ResultSet rs2 = stmt.executeQuery();
+            while(rs2.next()){
+                FXMLLoader box = new FXMLLoader(getClass().getResource("request_block.fxml"));
+                BorderPane boxpane = box.load();
 
-            Node img = boxpane.lookup("#img");
-            //Image image = new Image("url_of_file");
-            //((ImageView) img).setImage(image);
+                Node img = boxpane.lookup("#img");
+                //Image image = new Image("url_of_file");
+                //((ImageView) img).setImage(image);
 
-            Node name = boxpane.lookup("#name");
-            ((Label) name).setText(rs2.getString("nome"));
-            
-            request_container.getChildren().add(boxpane);
-        
-    }
+                Node name = boxpane.lookup("#name");
+                ((Label) name).setText(rs2.getString("nome"));
+
+                request_container.getChildren().add(boxpane);
+            }
+        }
+
     }
     
 

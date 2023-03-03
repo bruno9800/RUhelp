@@ -40,16 +40,20 @@ public class BuyFormsController {
     @FXML
     public void initialize() throws SQLException {
         Connection c = Conexao.getConexao();
+        // busca um emprestimo através de um codigoDisp
         String query = "select * from emprestar where pk_codDisp = ?";
         //String query = "select usuario.nome, usuario.categoria, emprestar.pk_codDisp, emprestar.horario, emprestar.diaSemana from usuario, emprestar where usuario.pk_cpf = emprestar.pkfk_cpf and emprestar.pk_codDisp = ?";
         PreparedStatement stmt = c.prepareStatement(query);
         stmt.setInt(1, codigo);
         ResultSet rs = stmt.executeQuery();
+        // a partir do cpf encontrar usuario ( nome, cpf, categoria
         query = "select pk_cpf,nome,categoria from usuario where pk_cpf = ?";
         stmt = c.prepareStatement(query);
         if(rs.next())
         stmt.setLong(1, Long.parseLong(rs.getString("pkfk_cpf")));
         ResultSet rs2 = stmt.executeQuery();
+
+        // rs2 = ( nome, cpf, categoria);
         if(rs2.next()){
 
             /*Emprestar e = new Emprestar(Integer.parseInt(rs.getString("pk_codDisp")),rs.getString("nome") , rs.getString("categoria"), rs.getString("diaSemana"),rs.getString("horario"));*/
@@ -85,3 +89,4 @@ public class BuyFormsController {
         }
     }
 }
+// CONSUNTANDO EMPRESTIMO, CONSULTANDO USUARIO E ENVIANDO UMA SOLICITAÇÃO;

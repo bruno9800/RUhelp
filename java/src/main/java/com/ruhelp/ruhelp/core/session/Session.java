@@ -38,6 +38,7 @@ public class Session {
 
     public void setUnlogged() {
       this.status = false;
+      this.user = null;
     }
     
 

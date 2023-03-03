@@ -20,27 +20,9 @@ public class EmprestarDao {
 
   
 
-  private EmprestarDao() {
-      this.disponiveis.clear();
-      try {
-        System.out.println("\n\n\n\nEntrou");
-        Session s = Session.getInstance();
-        ResultSet rs = ListarDisponiveis.list(s.getUser().getCpf());
+  private EmprestarDao() {}
 
-        System.out.println("Testando");
-        while(rs.next()){
-            System.out.println("teste "+rs.getString("horario"));
-            Emprestar e = new Emprestar(Integer.parseInt(rs.getString("pk_codDisp")) , rs.getString("nome"), rs.getString("categoria"), rs.getString("diaSemana"), rs.getString("horario"));
-            this.disponiveis.add(e);
-          }
-        for(Emprestar e: this.disponiveis) {
-            System.out.println("\n" + e.getName());
-        }
-      }catch(SQLException e) {
-    }
-  }
-
-  public static EmprestarDao getInstance() {
+  public static EmprestarDao getInstance() throws SQLException {
     if(EmprestarDao.Instance == null){
         System.out.println("Entrando");
         EmprestarDao.Instance = new EmprestarDao();
@@ -48,10 +30,6 @@ public class EmprestarDao {
 
     System.out.println("\n\n\n\nVeio");
     return EmprestarDao.Instance;
-  }
-
-  public void AtualizarInstance() {
-      
   }
   
 
@@ -62,5 +40,10 @@ public class EmprestarDao {
     }
 
     return null;
+  }
+
+  public void listarDisponiveis() throws SQLException {
+    Session s = Session.getInstance();
+    disponiveis = ListarDisponiveis.list(s.getUser().getCpf());
   }
 }

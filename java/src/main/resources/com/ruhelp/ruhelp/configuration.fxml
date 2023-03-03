@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.HelloController">
+<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ruhelp.ruhelp.ConfigurationController">
    <children>
       <BorderPane prefHeight="720.0" prefWidth="1280.0">
          <left>

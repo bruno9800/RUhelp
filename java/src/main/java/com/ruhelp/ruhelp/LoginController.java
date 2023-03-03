@@ -32,7 +32,6 @@ public class LoginController {
         Session sessao = Session.getInstance();
        sessao.isValidateLogin(cpfLogin.getText(), senhaLogin.getText());
         if(sessao.isStatus()){
-            test.setText("Entrou");
             sceneUtils.SetScene(event, "home.fxml");
         }else{
             test.setText("Usuário ou senha inválidos");

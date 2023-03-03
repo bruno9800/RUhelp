@@ -11,6 +11,7 @@ public class Session {
     private boolean status = false;
     private User user = null;
     
+
     public User getUser() {
         return user;
     }

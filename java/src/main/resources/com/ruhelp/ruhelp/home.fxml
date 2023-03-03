@@ -126,18 +126,7 @@
                               </Button>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="66.0" prefWidth="212.0">
-                           <children>
-                              <Button mnemonicParsing="false" onMouseClicked="#pedir" style="-fx-background-color: #00D957;" text="Pedir Cartão" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="20.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
-                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="66.0" prefWidth="212.0" />
                         <VBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="179.0">
                            <children>
                               <Label id="ruh" stylesheets="@ruh.css" text="R.UH" />
